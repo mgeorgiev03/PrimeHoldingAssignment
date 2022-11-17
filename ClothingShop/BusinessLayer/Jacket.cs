@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class Jackets : BaseClothing
+    public class Jacket : BaseClothing
     {
         [Required]
         public JacketAndTrousersSize Size { get; set; }
