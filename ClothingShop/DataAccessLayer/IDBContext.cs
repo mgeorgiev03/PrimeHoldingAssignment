@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    internal interface IDBContext<T, K> where T : BaseClothing where K : IConvertible
+    internal interface IDBContext<T> where T : BaseClothing
     {
         void Create(T item);
-        T? Get(K key);
+        T? Get(string key);
         ICollection<T>? GetAll();
         void Update(T item);
-        void Delete(K key);
+        void Delete(string key);
     }
 }

@@ -9,7 +9,7 @@ namespace DataAccessLayer
         { }
 
         public DbSet<Shirt> Shirts { get; set; }
-        public DbSet<Shoe> Shoes { get; set; }
+        public DbSet<Shoes> Shoes { get; set; }
         public DbSet<Jacket> Jackets { get; set; }
         public DbSet<Trousers> Trousers { get; set; }
 

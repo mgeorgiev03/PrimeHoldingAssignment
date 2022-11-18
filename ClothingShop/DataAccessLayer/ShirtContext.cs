@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class ShirtContext : IDBContext<Shirt, string>
+    public class ShirtContext : IDBContext<Shirt>
     {
         private Context context;
         public ShirtContext()
