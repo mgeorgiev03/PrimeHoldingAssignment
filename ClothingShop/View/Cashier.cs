@@ -11,18 +11,27 @@ namespace View
 {
     internal class Cashier
     {
-        public static void PrintReceipt(List<BaseClothing> clothes, DateTime currentDate)
+        public static void PrintReceipt()//List<BaseClothing> clothes, DateTime currentDate)
         {
             JacketContext jacketContext = new JacketContext();
             ShirtContext shirtContext = new ShirtContext();
             TrousersContext trousersContext = new TrousersContext();
             ShoesContext shoesContext = new ShoesContext();
 
-            clothes = new List<BaseClothing>();
-            clothes.AddRange(jacketContext.GetAll());
-            clothes.AddRange(shirtContext.GetAll());
-            clothes.AddRange(trousersContext.GetAll());
-            clothes.AddRange(shoesContext.GetAll());
+            List<Jacket> jackets = new List<Jacket>();
+            jackets = jacketContext.GetAll() as List<Jacket>;
+
+            foreach (var item in jackets)
+            {
+                Console.WriteLine(item.Name);
+            }
+
+
+            //clothes = new List<BaseClothing>();
+            //clothes.AddRange(jacketContext.GetAll());
+            //clothes.AddRange(shirtContext.GetAll());
+            //clothes.AddRange(trousersContext.GetAll());
+            //clothes.AddRange(shoesContext.GetAll());
 
             //print stuff
         }

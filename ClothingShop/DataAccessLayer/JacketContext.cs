@@ -28,7 +28,11 @@ namespace DataAccessLayer
 
         public ICollection<Jacket>? GetAll()
         {
-            return context.Jackets as ICollection<Jacket>;
+            ICollection<Jacket> result = context.Jackets as ICollection<Jacket>;
+            if (result != null)
+                return result;
+            else
+                throw new Exception("No jackets in database");
         }
 
         public void Update(Jacket item)

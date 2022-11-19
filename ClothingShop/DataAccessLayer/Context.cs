@@ -5,7 +5,7 @@ namespace DataAccessLayer
 {
     public class Context : DbContext
     {
-        public Context() : base("PHAssignment")
+        public Context() : base(@"Server=(localdb)\SQLEXPRESS;Database=PHAssignment;Trusted_Connection=True;")
         { }
 
         public DbSet<Shirt> Shirts { get; set; }
