@@ -15,6 +15,6 @@ namespace BusinessLayer
 
     public enum ShoeSize
     {
-
+        SampleSize
     }
 }

@@ -17,5 +17,7 @@ namespace BusinessLayer
         public double Price { get; set; }
         [Required]
         public string Color { get; set; }
+        //[Required]
+        //public string Size { get; set; }
     }
 }

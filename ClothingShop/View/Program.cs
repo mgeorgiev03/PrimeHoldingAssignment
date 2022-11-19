@@ -6,10 +6,5 @@
         {
             Console.WriteLine("Hello, World!");
         }
-
-        void Cashier()
-        {
-
-        }
     }
 }

@@ -6,7 +6,9 @@ namespace DataAccessLayer
     public class Context : DbContext
     {
         public Context() : base("PHAssignment")
-        { }
+        {
+            Database.SetInitializer(new ExecuteSeeder());
+        }
 
         public DbSet<Shirt> Shirts { get; set; }
         public DbSet<Shoes> Shoes { get; set; }
