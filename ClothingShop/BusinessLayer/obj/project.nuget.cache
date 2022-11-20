@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N9ibB8wB3OG0IG+ptQviQJmDV4RAd9mjz+pNFIH76KUdACAlB4l7p4XpuLjTsvNpBVj1LVFJWkQXwYXuSnE0yQ==",
+  "dgSpecHash": "UJyX82MOvP1hRHPBKcTlIVq9+gyF8TJYdlH/ThJexwZc3rgMddInqIeuS5kbFHEPTUp7Z0BzmHOWYGW8LnFgoQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\Model.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

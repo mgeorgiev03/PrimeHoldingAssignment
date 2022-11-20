@@ -4,12 +4,12 @@
     "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\View\\View.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\BusinessLayer.csproj",
-        "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\Model.csproj",
+        "projectName": "Model",
+        "projectPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\Model.csproj",
         "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
@@ -62,12 +62,12 @@
         }
       }
     },
-    "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\DataAccessLayer\\Controller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\DataAccessLayer\\DataAccessLayer.csproj",
-        "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\DataAccessLayer\\Controller.csproj",
+        "projectName": "Controller",
+        "projectPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\DataAccessLayer\\Controller.csproj",
         "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
@@ -90,8 +90,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\Model.csproj": {
+                "projectPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\Model.csproj"
               }
             }
           }
@@ -106,9 +106,19 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "EntityFramework": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.4.4, )"
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -158,11 +168,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\Model.csproj": {
+                "projectPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\BusinessLayer\\Model.csproj"
               },
-              "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\DataAccessLayer\\Controller.csproj": {
+                "projectPath": "C:\\Users\\maxim\\Desktop\\PrimeHoldingAssignment\\ClothingShop\\DataAccessLayer\\Controller.csproj"
               }
             }
           }

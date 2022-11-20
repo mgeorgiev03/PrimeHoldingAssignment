@@ -1,21 +1,62 @@
 ﻿using BusinessLayer;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer
 {
     public class Context : DbContext
     {
-        public Context() : base(@"Server=(localdb)\SQLEXPRESS;Database=PHAssignment;Trusted_Connection=True;")
-        { }
+        public Context() { }
 
-        public DbSet<Shirt> Shirts { get; set; }
-        public DbSet<Shoes> Shoes { get; set; }
-        public DbSet<Jacket> Jackets { get; set; }
-        public DbSet<Trousers> Trousers { get; set; }
+        public DbSet<Clothing> Clothes { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder builder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnModelCreating(builder);
+            optionsBuilder.UseSqlServer("server=localhost;database=PrimeHolding;Trusted_Connection=True;TrustServerCertificate=True");
+            base.OnConfiguring(optionsBuilder);
+        }
+
+        //Seed with basic data
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Clothing>().HasData(new Clothing
+            {
+                Name = "Red linen jacket",
+                Brand = "LC Waikiki",
+                Price = 50.0,
+                Color = "Red",
+                Size = "46",
+                Type = ClothingType.Jacket
+            });
+
+            modelBuilder.Entity<Clothing>().HasData(new Clothing()
+            {
+                Name = "Jean Shirt",
+                Brand = "Wyoming",
+                Price = 15.0,
+                Color = "Light Blue",
+                Size = "L",
+                Type = ClothingType.Shirt
+            });
+
+            modelBuilder.Entity<Clothing>().HasData(new Clothing()
+            {
+                Name = "Black Linen Trousers",
+                Brand = "LC Waikiki",
+                Price = 40.0,
+                Color = "Black",
+                Size = "34",
+                Type = ClothingType.Trousers
+            });
+
+            modelBuilder.Entity<Clothing>().HasData(new Clothing()
+            {
+                Name = "Sports Shoes",
+                Brand = "Decathlon",
+                Price = 35.0,
+                Color = "Light Brown",
+                Size = "44",
+                Type = ClothingType.Shoes
+            });
         }
     }
 }
